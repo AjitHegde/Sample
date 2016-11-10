@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="action_settings">Settings</string>
+    <string name="title">My App</string>
+    <string name="firstval">Enter first number:</string>
+    <string name="secval">Enter second number:</string>
+    <string name="res">Result</string>
+    <string name="btn">Add</string>
+
+</resources>
