@@ -21,71 +21,78 @@
         android:textSize="30sp"
         android:textColor="@android:color/black" />
 
+    <EditText
+        android:id="@+id/num1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginLeft="50dp"
+        android:layout_alignTop="@+id/firstval"
+        android:layout_toEndOf="@+id/firstval"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="6dp" />
+
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_alignTop="@+id/secondval"
+        android:layout_alignStart="@+id/num1" />
+
+    <TextView
+        android:text=""
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:id="@+id/result"
+        android:hint="@string/res"
+        android:layout_marginTop="62dp"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_below="@+id/num2"
+        android:layout_toEndOf="@+id/title"
+        android:textColor="@android:color/black"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="@string/btn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:id="@+id/btn"
+        android:layout_below="@+id/result"
+        android:layout_alignStart="@+id/result"
+        android:layout_marginTop="66dp"
+        android:layout_alignEnd="@+id/result" />
+
     <TextView
         android:id="@+id/firstval"
         android:layout_marginTop="13dp"
-        android:layout_marginLeft="20dp"
-        android:layout_height="40dp"
+               android:layout_height="40dp"
         android:text="@string/firstval"
         android:layout_width="200dp"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_below="@+id/title"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp" />
-
-    <EditText
-        android:id="@+id/num1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_marginTop="17dp"
-        android:layout_below="@+id/firstval"
-        android:layout_alignStart="@+id/firstval"
-        android:layout_alignEnd="@+id/firstval" />
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/secondval"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="27dp"
         android:layout_height="40dp"
         android:text="@string/secval"
         android:layout_width="200dp"
         android:textSize="20sp"
         android:textColor="@android:color/black"
         android:layout_below="@+id/num1"
-        android:layout_alignStart="@+id/num1" />
-
-    <TextView
-        android:text=""
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:id="@+id/result"
-        android:hint="@string/res"
-        android:layout_below="@+id/num2"
-        android:layout_alignStart="@+id/num2"
-        android:layout_marginTop="30dp"
-        android:layout_alignEnd="@+id/num2"
-        android:textColorHint="@android:color/darker_gray" />
-
-    <EditText
-        android:id="@+id/num2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:layout_below="@+id/secondval"
-        android:layout_alignStart="@+id/secondval"
-        android:layout_marginTop="27dp"
-        android:layout_alignEnd="@+id/secondval" />
+        android:layout_alignParentStart="true" />
 
     <Button
-        android:text="@string/btn"
+        android:text="@string/newp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="44dp"
-        android:id="@+id/btn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/result"
-        android:layout_marginBottom="11dp" />
+        android:layout_below="@+id/btn"
+        android:layout_alignEnd="@+id/btn"
+        android:layout_marginTop="45dp"
+        android:id="@+id/btnnew" />
 </RelativeLayout>
