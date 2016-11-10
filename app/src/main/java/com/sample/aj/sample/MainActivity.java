@@ -31,11 +31,16 @@ public class MainActivity extends AppCompatActivity {
         btnAdd=(Button)findViewById(R.id.btn);
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                int a=Integer.parseInt(n1.getText().toString());
-                int b=Integer.parseInt(n2.getText().toString());
-                
-                int c=a+b;
-                res.setText(Integer.toString(c));
+                try
+                {
+                    int a = Integer.parseInt(n1.getText().toString());
+                    int b = Integer.parseInt(n2.getText().toString());
+                    int c = a + b;
+                    res.setText(Integer.toString(c));
+                }catch(Exception e){
+                    Toast a=Toast.makeText(getBaseContext(),"Please enter valid numbers",Toast.LENGTH_LONG);
+                    a.show();
+                }
             }
         });
     }
