@@ -6,6 +6,6 @@
     <string name="secval">Enter second number:</string>
     <string name="res">Result</string>
     <string name="btn">Add</string>
-    <string name="newp">New</string>
+    <string name="btnDraw">Draw</string>
 
 </resources>
