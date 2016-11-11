@@ -1,5 +1,6 @@
 package com.sample.aj.sample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText n1,n2;
     TextView res;
-    Button btnAdd,btnnewp;
+    Button btnAdd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
