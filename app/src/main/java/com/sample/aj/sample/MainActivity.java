@@ -1,11 +1,17 @@
 package com.sample.aj.sample;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText n1,n2;
     TextView res;
-    Button btnAdd;
+    Button btnAdd,btnnew,btnclean;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         n2=(EditText)findViewById(R.id.num2);
         res=(TextView)findViewById(R.id.result);
         btnAdd=(Button)findViewById(R.id.btn);
+        btnnew=(Button)findViewById(R.id.btnnew);
         btnAdd.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 try
@@ -44,5 +52,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        btnnew.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                setContentView(new SingleTouchEventView(getApplicationContext(),null));
+
+            }
+        });
+    }
+    public void onBackPressed()
+    {
+            setContentView(new SingleTouchEventView(getApplicationContext(), null));
+            Toast a=Toast.makeText(getBaseContext(),"Press Home button to exit",Toast.LENGTH_SHORT);
+            a.show();
     }
 }
